@@ -323,6 +323,10 @@ footer .row div ul li a {
   color: white;
 }
 
+footer .row div ul li a:hover {
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 991px) {
   header {
     display: -webkit-box;

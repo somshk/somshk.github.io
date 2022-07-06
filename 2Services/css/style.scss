@@ -234,6 +234,8 @@ header {
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            width: 100%;
 
             h2 {
                 font-size: 1.5rem;
@@ -426,6 +428,10 @@ footer {
         
                     a {
                         color: white;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
