@@ -8,6 +8,7 @@
 
     --typo-bg-clr: rgba(79, 71, 66, .12);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .darkmode {
@@ -16,6 +17,10 @@
     --brand-name-clr: white;
 
     --typo-bg-clr: rgba(247, 184, 4, .12);
+
+    .btn-close {
+        filter: invert(1);
+    }
 }
 
 body {
@@ -23,6 +28,8 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    background-color: var(--background-clr);
+    transition: var(--transition-delay);
 }
 
 body.loading {
@@ -144,8 +151,6 @@ header {
 
 .container-fluid {
     padding: 0;
-    background-color: var(--background-clr);
-    transition: var(--transition-delay);
 
 }
 
@@ -189,7 +194,6 @@ header {
 
         .slide-content {
             padding: 2em 4.5em;
-            overflow: hidden;
         }
 
         .card {
@@ -278,6 +282,7 @@ header {
                 font-size: 1rem;
                 letter-spacing: 0.05em;
             }
+
         }
 
         .modal-body {
@@ -544,6 +549,15 @@ footer {
     .wholesale {
         margin-bottom: 5em;
 
+        .text {
+
+            h1 {
+                text-align: center;
+            }
+            
+        }
+
+
         .img {
             display: flex;
             align-items: center;
@@ -562,6 +576,14 @@ footer {
 
     .hauling {
         margin-top: 5em; 
+
+        .text {
+
+            h1 {
+                text-align: center;
+            }
+            
+        }
 
         .img {
             display: flex;
@@ -599,6 +621,56 @@ footer {
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width:575px) {
+
+    header {
+        
+        .shop-name {
+            font-size: 1.5rem;
+        }
+    }
+
+    .products h1 {
+        font-size: 2rem;
+    }
+
+    .products p {
+        font-size: 1.3rem;
+    }
+
+    .wholesale {
+        margin: 2em;
+    }
+    
+    .wholesale .text {
+        padding: 1em;
+    }
+
+    .wholesale .text h1{
+        font-size: 1.7rem;
+    }
+
+    .wholesale .text p {
+        font-size: 1rem;
+    }
+
+    .hauling {
+        margin: 2em;
+    }
+
+    .hauling .text {
+        padding: 1em;
+    }
+    
+    .hauling .text h1{
+        font-size: 1.7rem;
+    }
+
+    .hauling .text p {
+        font-size: 1rem;
     }
 }
 

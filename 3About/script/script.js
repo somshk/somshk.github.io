@@ -54,12 +54,13 @@ function popupToggle(){
 
 /* Dark Mode Toggle */
 let darkMode = localStorage.getItem("darkMode");
-var icon = document.getElementById("dark-mode-icon")
-var menuIcon = document.getElementById("dark-mode-menu-icon")
+var toggle = document.getElementById("dark-mode-icon");
+var menuToggle = document.getElementById("dark-mode-menu-icon");
+var menuIcon = document.getElementById("menu");
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
-const darkModeMenuToggle = document.querySelector("#dark-mode-menu-toggle")
-var email = document.getElementById("email-icon")
-var phone = document.getElementById("phone-icon")
+const darkModeMenuToggle = document.querySelector("#dark-mode-menu-toggle");
+var email = document.getElementById("email-icon");
+var phone = document.getElementById("phone-icon");
 
 const enableDarkMode = () => {
 
@@ -67,9 +68,11 @@ const enableDarkMode = () => {
 
   localStorage.setItem("darkMode", "enabled");
 
-  icon.src = "NavBarFooter/img/LightModeToggle.png";
+  toggle.src = "NavBarFooter/img/LightModeToggle.png";
 
-  menuIcon.src = "NavBarFooter/img/MenuLMToggle.png";
+  menuToggle.src = "NavBarFooter/img/MenuLMToggle.png";
+
+  menuIcon.src = "NavBarFooter/img/DarkModeNavMenu.png";
 
   email.src = "3About/img/DarkModeEmail.png"
 
@@ -83,9 +86,11 @@ const disableDarkMode = () => {
 
   localStorage.removeItem("darkMode");
 
-  icon.src = "NavBarFooter/img/DarkModeToggle.png";
+  toggle.src = "NavBarFooter/img/DarkModeToggle.png";
 
-  menuIcon.src = "NavBarFooter/img/MenuDMToggle.png";
+  menuToggle.src = "NavBarFooter/img/MenuDMToggle.png";
+
+  menuIcon.src = "NavBarFooter/img/LightModeNavMenu.png";
 
   email.src = "3About/img/LightModeEmail.png"
 

@@ -6,6 +6,7 @@
   --brand-name-clr: #4F4742;
   --transition-delay: all 300ms ease-in-out;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .darkmode {
@@ -19,6 +20,9 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  background-color: var(--background-clr);
+  -webkit-transition: var(--transition-delay);
+  transition: var(--transition-delay);
 }
 
 body.loading {
@@ -151,9 +155,6 @@ header .DarkModeToggle {
 
 .container-fluid {
   padding: 0;
-  background-color: var(--background-clr);
-  -webkit-transition: var(--transition-delay);
-  transition: var(--transition-delay);
 }
 
 .history {
@@ -250,7 +251,6 @@ header .DarkModeToggle {
 }
 
 .owner .pfp {
-  margin-left: -1em;
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -455,12 +455,18 @@ footer .row div ul li a:hover {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+  .mission-vision .mission-wrapper .mission {
+    padding: 1em;
+  }
   .mission-vision .mission-wrapper .mission h1 {
     margin: 0;
   }
   .mission-vision .mission-wrapper .mission p {
     margin: 1em;
     font-size: 1.3rem;
+  }
+  .mission-vision .vision-wrapper .vision {
+    padding: 1em;
   }
   .mission-vision .vision-wrapper .vision h1 {
     margin: 0;
@@ -487,15 +493,59 @@ footer .row div ul li a:hover {
 }
 
 @media only screen and (max-width: 575px) {
+  header .shop-name {
+    font-size: 1.5rem;
+  }
+  .history h1 {
+    font-size: 1.7rem;
+  }
+  .history p {
+    font-size: 1rem;
+  }
+  .mission-vision {
+    margin: auto;
+  }
+  .mission-vision .mission-wrapper .mission {
+    padding: 1em;
+  }
+  .mission-vision .mission-wrapper .mission p {
+    font-size: 1rem;
+  }
+  .mission-vision .vision-wrapper .vision {
+    padding: 1em;
+  }
+  .mission-vision .vision-wrapper .vision p {
+    font-size: 1rem;
+  }
+  .owner .pfp img {
+    width: 80%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .owner .content h1 {
+    font-size: 1.7rem;
+  }
+  .owner .content .subtitle {
+    font-size: 1rem;
+  }
+  .owner .content p {
+    font-size: 1rem;
+  }
   .owner .content .contacts .email {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
   }
+  .owner .content .contacts .email p {
+    font-size: 1rem;
+  }
   .owner .content .contacts .phone {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
+  }
+  .owner .content .contacts .phone p {
+    font-size: 1rem;
   }
 }
 

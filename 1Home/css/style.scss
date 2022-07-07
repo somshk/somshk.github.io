@@ -10,6 +10,7 @@
     --boxbg-clr: rgba(247, 184, 4, .28);
     --map-border-clr: var(--second-accent-clr);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .darkmode {
@@ -26,7 +27,8 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+    background-color: var(--background-clr);
+    transition: var(--transition-delay);
 }
 
 body.loading {
@@ -49,6 +51,7 @@ header {
     padding: 0 2em 0 2em;
     transition: all 300ms ease-in-out;
     z-index: 999;
+    margin-top: -8em;
 
     .shop-name {
         color: var(--brand-name-clr);
@@ -148,13 +151,10 @@ header {
 
 .container-fluid {
     padding: 0;
-    background-color: var(--background-clr);
-    transition: var(--transition-delay);
 }
 
 .hero {
-    position: relative;
-    top: 4em;
+    margin-top: 8em;
     margin-bottom: 5em;
     
     .herotext {
@@ -168,12 +168,14 @@ header {
         .title {
             display: flex;
             flex-direction: column;
+            justify-content: right;
 
             h1 {
-                text-align: right;
+                text-align: center;
                 font-size: 3rem;
                 font-weight: bold;
                 color: #F7B804;
+                text-align: center;
 
                 span {
                     color: var(--brand-name-clr);
@@ -182,8 +184,12 @@ header {
 
             .subtitle {
                 font-size: 1.5rem;
-                text-align: right;
+                text-align: center;
                 color: var(--text-clr);
+                padding: 0;
+                margin-left: auto;
+                margin-right: 0;
+                width: fit-content;
             }
             
         }
@@ -378,11 +384,13 @@ footer {
     
 }
 
+
 @media only screen and (max-width:991px) {
 
     header {
         display: flex;
         justify-content: space-between;
+        margin: 0;
 
         .menu {
             display: block;
@@ -458,6 +466,18 @@ footer {
         top: 0;
         margin: 0;
 
+        .herotext {
+            
+            .title {
+                justify-content: center;
+
+                .subtitle {
+                    margin: auto;
+                }
+            }
+            
+        }
+
         .slideshow .swiper-container {
             width: 90%;
         }
@@ -484,18 +504,63 @@ footer {
     footer .row div {
         display: block;
     }
+}
 
-    .hero .herotext .title {
+@media only screen and (max-width:575px) {
+    header {
+        margin-top: -5em;
 
-        h1 {
-            text-align: center;
-        }
-
-        .subtitle {
-            text-align: center;
+        .shop-name {
+            font-size: 1.5rem;
         }
     }
+
+    .hero {
+        margin-top: 5em;
+        gap: 4em;
+    }
+
+    .hero .herotext {
+        height: auto;
+    }
+
+    .hero .herotext .title h1 {
+        font-size: 2rem;
+    }
+
+    .hero .herotext .title .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero .herotext .buttons {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .hero .slideshow {
+        height: 40vh;
+    }
+
+    .intro {
+        margin-top: 3em;
+    }
+
+    .intro .header h1 {
+        font-size: 2rem;
+        padding: 1.5em;
+    }
+
+    .intro .text p {
+        font-size: 1.3em;
+        padding: 1.5em;
+    }
+
+    .location h1 {
+        font-size: 1.5rem;
+    }
+
 }
+
 
 .loader-wrapper {
     width: 100%;

@@ -5,9 +5,9 @@
     --second-accent-clr: #4F4742;
     --brand-name-clr: #4F4742;
     --transition-delay: all 300ms ease-in-out;
-
-    --form-border-clr: var(--second-accent-clr);
     scroll-behavior: smooth;
+
+    --h1-clr: var(--second-accent-clr);
 }
 
 .darkmode {
@@ -15,7 +15,7 @@
     --text-clr: white;
     --brand-name-clr: white;
 
-    --form-border-clr: var(--first-accent-clr);
+    --h1-clr: var(--first-accent-clr);
 }
 
 body {
@@ -144,79 +144,38 @@ header {
     }
 }
 
-.container-fluid {
-    padding: 0;
-}
-
-form {
-    margin: auto;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 2em;
+.thanks {
+    height: 80vh;
+    padding: 5em;
 
     h1 {
         font-size: 2.5rem;
         font-weight: bold;
-        letter-spacing: 0.105em;
-        margin-top: 2em;
-        color: var(--text-clr);
+        color: var(--h1-clr);
     }
 
-    input {
-        border: .25em solid;
-        border-color: var(--form-border-clr);
-        border-radius: 0.875em;
-        height: 2.75em;
-        width: 21.563em;
-        margin: 1em;
-        padding: 0 .5em 0 .5em;
-        outline: none;
-        background: var(--background-clr);
-        color: var(--text-clr);
-
-        &::placeholder {
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-            color: var(--text-clr);
-        }
-    }
-
-    textarea {
-        border: .25em solid;
-        border-color: var(--form-border-clr);
-        border-radius: 0.875em;
-        width: 67.188vw;
-        height: 19.625em;
-        margin: 1em;
-        padding: .5em;
-        outline: none;
-        background: var(--background-clr);
-        color: var(--text-clr);
-
-        &::placeholder {
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-            color: var(--text-clr);
-        }
-    }
-
-    button {
-        background: #F7B804;
-        color: black;
-        border: none;
-        width: 160px;
-        margin-left: 1em;
-        padding: .5em;
-        border-radius: 5.313em;
+    p {
         font-size: 1.5rem;
+        color: var(--text-clr);
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10em;
+        height: 2em;
+        color: var(--text-clr);
+        padding: 0;
+        border: 0.2em solid;
+        border-color: #4F4742;
+        font-size: 1.3rem;
         font-weight: bold;
-        cursor: pointer;
-        transition: .3s ease-in-out;
+        transition: var(--transition-delay);
 
         &:hover {
-            transform: scale(110%);
-
+            background: #4F4742;
+            color: #F7B804;
         }
     }
 }
@@ -358,88 +317,5 @@ footer {
         .shop-name {
             font-size: 1.5rem;
         }
-    }
-
-    form h1 {
-        font-size: 1.7rem;
-    }
-
-    form input {
-        width: 67.188vw;
-    }
-}
-
-.loader-wrapper {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2000;
-    background-color: var(--second-accent-clr);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.loader {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    border: 4px solid;
-    border-color: var(--first-accent-clr);
-    animation: loader 2s infinite ease;
-}
-  
-.loader-inner {
-    vertical-align: top;
-    display: inline-block;
-    width: 100%;
-    background-color: var(--first-accent-clr);
-    animation: loader-inner 2s infinite ease-in;
-}
-  
-@keyframes loader {
-    0% {
-      transform: rotate(0deg);
-    }
-    
-    25% {
-      transform: rotate(180deg);
-    }
-    
-    50% {
-      transform: rotate(180deg);
-    }
-    
-    75% {
-      transform: rotate(360deg);
-    }
-    
-    100% {
-      transform: rotate(360deg);
-    }
-}
-  
-@keyframes loader-inner {
-    0% {
-      height: 0%;
-    }
-    
-    25% {
-      height: 0%;
-    }
-    
-    50% {
-      height: 100%;
-    }
-    
-    75% {
-      height: 100%;
-    }
-    
-    100% {
-      height: 0%;
     }
 }

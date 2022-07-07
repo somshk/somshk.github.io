@@ -6,6 +6,7 @@
     --brand-name-clr: #4F4742;
     --transition-delay: all 300ms ease-in-out;
     scroll-behavior: smooth;
+    overflow-x: hidden;
     
 }
 
@@ -20,6 +21,8 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    background-color: var(--background-clr);
+    transition: var(--transition-delay);
 }
 
 body.loading {
@@ -141,8 +144,7 @@ header {
 
 .container-fluid {
     padding: 0;
-    background-color: var(--background-clr);
-    transition: var(--transition-delay);
+    
 }
 
 .history {
@@ -238,7 +240,6 @@ header {
     width: 90%;
 
     .pfp {
-        margin-left: -1em;
         padding: 1em;
         display: flex;
         align-items: flex-start;
@@ -427,6 +428,7 @@ footer {
         .mission-wrapper {
 
             .mission {
+                padding: 1em;
 
                 h1 {
                     margin: 0;
@@ -442,6 +444,7 @@ footer {
         .vision-wrapper {
 
             .vision {
+                padding: 1em;
 
                 h1 {
                     margin: 0;
@@ -484,13 +487,74 @@ footer {
 
 @media only screen and (max-width:575px) {
 
+    header {
+        
+        .shop-name {
+            font-size: 1.5rem;
+        }
+    }
+
+    .history h1 {
+        font-size: 1.7rem;
+    }
+
+    .history p {
+        font-size: 1rem;
+    }
+
+    .mission-vision {
+        margin: auto;
+    }
+
+    .mission-vision .mission-wrapper .mission {
+        padding: 1em;
+    }
+
+    .mission-vision .mission-wrapper .mission p {
+        font-size: 1rem;
+    }
+
+    .mission-vision .vision-wrapper .vision {
+        padding: 1em;
+    }
+
+    .mission-vision .vision-wrapper .vision p {
+        font-size: 1rem;
+    }
+
+
+    .owner .pfp img{
+        width: 80%;
+        object-fit: cover;
+    }
+
+    .owner .content h1 {
+        font-size: 1.7rem;
+    }
+
+    .owner .content .subtitle {
+        font-size: 1rem;
+    }
+
+    .owner .content p {
+        font-size: 1rem;
+    }
+
     .owner .content .contacts {
         .email {
             justify-content: left;
+
+            p {
+                font-size: 1rem;
+            }
         }
 
         .phone {
             justify-content: left;
+
+            p {
+                font-size: 1rem;
+            }
         }
     }
 }

@@ -5,15 +5,15 @@
   --second-accent-clr: #4F4742;
   --brand-name-clr: #4F4742;
   --transition-delay: all 300ms ease-in-out;
-  --form-border-clr: var(--second-accent-clr);
   scroll-behavior: smooth;
+  --h1-clr: var(--second-accent-clr);
 }
 
 .darkmode {
   --background-clr: #0D0D0D;
   --text-clr: white;
   --brand-name-clr: white;
-  --form-border-clr: var(--first-accent-clr);
+  --h1-clr: var(--first-accent-clr);
 }
 
 body {
@@ -154,123 +154,47 @@ header .DarkModeToggle {
           transform: translateY(-100%);
 }
 
-.container-fluid {
-  padding: 0;
+.thanks {
+  height: 80vh;
+  padding: 5em;
 }
 
-form {
-  margin: auto;
-  width: auto;
+.thanks h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--h1-clr);
+}
+
+.thanks p {
+  font-size: 1.5rem;
+  color: var(--text-clr);
+}
+
+.thanks a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 2em;
-}
-
-form h1 {
-  font-size: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 10em;
+  height: 2em;
+  color: var(--text-clr);
+  padding: 0;
+  border: 0.2em solid;
+  border-color: #4F4742;
+  font-size: 1.3rem;
   font-weight: bold;
-  letter-spacing: 0.105em;
-  margin-top: 2em;
-  color: var(--text-clr);
+  -webkit-transition: var(--transition-delay);
+  transition: var(--transition-delay);
 }
 
-form input {
-  border: .25em solid;
-  border-color: var(--form-border-clr);
-  border-radius: 0.875em;
-  height: 2.75em;
-  width: 21.563em;
-  margin: 1em;
-  padding: 0 .5em 0 .5em;
-  outline: none;
-  background: var(--background-clr);
-  color: var(--text-clr);
-}
-
-form input::-webkit-input-placeholder {
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-clr);
-}
-
-form input:-ms-input-placeholder {
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-clr);
-}
-
-form input::-ms-input-placeholder {
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-clr);
-}
-
-form input::placeholder {
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-clr);
-}
-
-form textarea {
-  border: .25em solid;
-  border-color: var(--form-border-clr);
-  border-radius: 0.875em;
-  width: 67.188vw;
-  height: 19.625em;
-  margin: 1em;
-  padding: .5em;
-  outline: none;
-  background: var(--background-clr);
-  color: var(--text-clr);
-}
-
-form textarea::-webkit-input-placeholder {
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-clr);
-}
-
-form textarea:-ms-input-placeholder {
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-clr);
-}
-
-form textarea::-ms-input-placeholder {
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-clr);
-}
-
-form textarea::placeholder {
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-clr);
-}
-
-form button {
-  background: #F7B804;
-  color: black;
-  border: none;
-  width: 160px;
-  margin-left: 1em;
-  padding: .5em;
-  border-radius: 5.313em;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-
-form button:hover {
-  -webkit-transform: scale(110%);
-          transform: scale(110%);
+.thanks a:hover {
+  background: #4F4742;
+  color: #F7B804;
 }
 
 footer {
@@ -413,133 +337,6 @@ footer .row div ul li a:hover {
 @media only screen and (max-width: 575px) {
   header .shop-name {
     font-size: 1.5rem;
-  }
-  form h1 {
-    font-size: 1.7rem;
-  }
-  form input {
-    width: 67.188vw;
-  }
-}
-
-.loader-wrapper {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2000;
-  background-color: var(--second-accent-clr);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  border: 4px solid;
-  border-color: var(--first-accent-clr);
-  -webkit-animation: loader 2s infinite ease;
-          animation: loader 2s infinite ease;
-}
-
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: var(--first-accent-clr);
-  -webkit-animation: loader-inner 2s infinite ease-in;
-          animation: loader-inner 2s infinite ease-in;
-}
-
-@-webkit-keyframes loader {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  25% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  75% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes loader {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  25% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  75% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes loader-inner {
-  0% {
-    height: 0%;
-  }
-  25% {
-    height: 0%;
-  }
-  50% {
-    height: 100%;
-  }
-  75% {
-    height: 100%;
-  }
-  100% {
-    height: 0%;
-  }
-}
-
-@keyframes loader-inner {
-  0% {
-    height: 0%;
-  }
-  25% {
-    height: 0%;
-  }
-  50% {
-    height: 100%;
-  }
-  75% {
-    height: 100%;
-  }
-  100% {
-    height: 0%;
   }
 }
 /*# sourceMappingURL=style.css.map */
